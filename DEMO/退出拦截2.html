@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="history.go(-1)">取消forward</button>
+  <script>
+    window.history.pushState(null, null, '?back')
+    window.history.forward(1)  
+  </script>
+</body>
+</html>
