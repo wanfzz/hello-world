@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Grid</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    .list {
+      display: grid; /*容器采用网格布局*/
+      grid-template-columns: 100px 100px 100px ;
+      grid-template-rows: 100px 100px 100px;
+      grid-gap: 2px;
+    }
+    
+    /*
+      grid-column-start属性：左边框所在的垂直网格线
+      grid-column-end属性：右边框所在的垂直网格线
+      grid-row-start属性：上边框所在的水平网格线
+      grid-row-end属性：下边框所在的水平网格线
+    */
+    
+    .item {
+      list-style: none;
+      font-size: 20px;
+      color: #fff;
+    }
+    /*
+    span关键字 表示"跨越"，即左右边框（上下边框）之间跨越多少个网格
+    */
+    .item-3 {
+      grid-column-start: 2;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end: 4;
+      grid-row: 2 / 4; /*简写*/
+      grid-column: 2 / 4; /*简写*/
+      grid-row: 2 / span 2;
+      grid-column: 2 / span 2;
+      grid-row: 2; /* 斜杠以及后面的部分可以省略，默认跨越两个网格。 */
+      grid-column: 2;
+    }
+  </style>
+</head>
+<body>
+<h1>header</h1>
+<ul class="list">
+  <li class="item item-1" style="background-color: red;">1</li>
+  <li class="item item-2" style="background-color: blue;">2</li>
+  <li class="item item-3" style="background-color: brown;">3</li>
+  <li class="item item-4" style="background-color: green;">4</li>
+  <li class="item item-5" style="background-color: aqua;">5</li>
+  <li class="item item-6" style="background-color: black;">6</li>
+  <li class="item item-7" style="background-color: orangered;">7</li>
+  <li class="item item-8" style="background-color: pink;">8</li>
+  <li class="item item-9" style="background-color: yellow;">9</li>
+</ul>
+<h1>footer</h1>
+</body>
+</html>
