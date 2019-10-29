@@ -1,0 +1,13 @@
+{
+    "baseUrl": ".",
+    "target": "es5",
+    "removeComments": true,
+    "sourceMap": true,
+    "types": [ 
+        "node"
+    ],
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationDir": "./lib",
+    "allowJs": true,
+}
