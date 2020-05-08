@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="../libs/swiper/dist/css/swiper.min.css">
+</head>
+<body>
+  <div class="blog-slider">
+    <div class="blog-slider__wrp swiper-wrapper">
+      <div class="blog-slider__item swiper-slide">
+        <div class="blog-slider__img">
+          <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="">
+        </div>
+        <div class="blog-slider__content">
+            <span class="blog-slider__code">1.26 December 2019</span>
+            <div class="blog-slider__title">Lorem Ipsum Dolor</div>
+            <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
+            <a href="" class="blog-slider__button">READ MORE</a>
+        </div>
+      </div>
+      <div class="blog-slider__item swiper-slide">
+        <div class="blog-slider__img">
+          <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759871/jason-leung-798979-unsplash.jpg" alt="">
+        </div>
+        <div class="blog-slider__content">
+          <span class="blog-slider__code">2.26 December 2019</span>
+          <div class="blog-slider__title">Lorem Ipsum Dolor2</div>
+          <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
+          <a href="#" class="blog-slider__button">READ MORE</a>
+        </div>
+      </div>
+      <div class="blog-slider__item swiper-slide">
+        <div class="blog-slider__img">
+          <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759871/alessandro-capuzzi-799180-unsplash.jpg" alt="">
+        </div>
+        <div class="blog-slider__content">
+          <span class="blog-slider__code">3.26 December 2019</span>
+          <div class="blog-slider__title">Lorem Ipsum Dolor</div>
+          <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
+          <a href="#" class="blog-slider__button">READ MORE</a>
+        </div>
+      </div>
+    </div>
+    <div class="blog-slider__pagination"></div>
+  </div>
+  <script src="../libs/jquery/jquery.min.js"></script>
+  <script src="../libs/swiper/dist/js/swiper.min.js"></script>
+  <script>
+    $(function() {
+
+      var swiper = new Swiper('.blog-slider', {
+        spaceBetween: 30, // 在slide之间设置距离（单位px）。
+        effect: 'fade',
+        // loop: true,
+        mousewheel: {
+          invert: false, // 这个参数会使鼠标滚轮控制方向反转。
+        },
+        // // autoHeight: true,
+        pagination: {
+          el: '.blog-slider__pagination',
+          clickable: true, // 点击分页器的指示点分页器会控制Swiper切换。
+        }
+      });
+    })
+  </script>
+</body>
+</html>
