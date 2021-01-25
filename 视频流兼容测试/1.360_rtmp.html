@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>video.js播放rtmp流</title>
+    <link href="./libs/video-js.min.css" rel="stylesheet">
+    <script src="./libs/video.min.js"></script>
+    <script src="./libs/videojs-flash.min.js"></script>
+</head>
+<!-- 
+360测试可以
+chrome无法播放
+ -->
+<body>
+    <video id="my-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto"
+        autoplay="autoplay" poster="images/logo.png" width="500" height="400" data-setup='{}'>
+        <source src='rtmp://localhost/live/STREAM_NAME' type='rtmp/flv' />
+    </video>
+    <script type="text/javascript">
+        // 1. node .\single_app.js [启动流媒体服务]
+        // 2. ffmpeg -re -i ".\assets\demo.mp4" -c copy -f flv rtmp://localhost/live/STREAM_NAME [推流]
+        videojs.options.flash.swf = './libs/video-js.swf';
+        var player = videojs('my-player');
+        player.play();
+    </script>
+</body>
+
+</html>

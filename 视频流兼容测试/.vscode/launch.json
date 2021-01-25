@@ -5,13 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "node",
+            "type": "chrome",
             "request": "launch",
-            "name": "启动程序",
-            "program": "${workspaceFolder}\\typescript-todo\\app\\todo.ts",
-            "outFiles": [
-                "${workspaceFolder}/**/*.js"
-            ]
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:5500",
+            "webRoot": "${workspaceFolder}"
         }
     ]
 }
