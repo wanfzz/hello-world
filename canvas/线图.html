@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #000;
+    }
+
+    #box {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="box">
+    <canvas width="800" height="300" id="canvas" style="background: #333;"></canvas>
+  </div>
+  <script>
+    function draw(datas) {
+      var canvas = document.getElementById('canvas')
+      var g = canvas.getContext('2d')
+      var width = canvas.width
+      var height = canvas.height
+      const LINE_GAP = 24
+      const len = datas.length
+      const max = Math.max.apply(Math, datas.map(item => {
+        return item.value
+      }))
+      g.translate(0, height)
+
+      g.save()
+      g.beginPath();
+      g.lineWidth = 3;
+      g.strokeStyle = '#fff'
+      g.moveTo(0, 0)
+      g.lineTo(width, 0)
+      g.stroke()
+
+      g.save()
+      for (var i = 0; i < datas.length; i++) {
+        let info = datas[i]
+        let rate = info.value / max
+        g.translate(LINE_GAP, 0)
+        // 圆形
+        g.beginPath();
+        g.fillStyle = '#fff';
+        g.arc(0, -height * rate + 8, 8, 0, 2 * Math.PI);
+        g.shadowBlur = 20;
+        g.shadowColor = "#fff";
+        g.fill();
+        // 针
+        g.beginPath();
+        g.lineWidth = 2;
+        g.strokeStyle = '#fff'
+        g.moveTo(0, 0)
+        g.lineTo(0, -height * rate)
+        g.stroke();
+      }
+      g.restore()
+    }
+
+    window.onload = function () {
+
+      draw(new Array(31).fill({}).map((item, index) => {
+        return {
+          name: '#' + index,
+          value: 300 + Math.random() * 200
+        }
+      }))
+    }
+
+  </script>
+
+</body>
+
+</html>
