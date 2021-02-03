@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled, { css } from 'styled-components'
 import { useHistory } from 'react-router'
 
@@ -18,6 +18,17 @@ const Button = styled.button<{ primary?: boolean }>`
 
 function Home() {
   let history = useHistory();
+
+  useEffect(() => {
+    fetch('/articles').then(response => {
+      return response.json()
+    }).then(res => {
+      console.log(res)
+    }).catch(function (err) {
+      console.log(err);
+    })
+  }, [])
+
   return (
     <>
       <h1>HOME</h1>

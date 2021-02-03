@@ -2,6 +2,7 @@ import { renderRoutes } from 'react-router-config'
 import { HashRouter, Redirect } from 'react-router-dom'
 import Home from '@/container/Home';
 import Login from '@/container/Login';
+import { AxiosConfig } from '@/providers/axios'
 
 const routerConfig = [
   {
@@ -22,9 +23,11 @@ const routerConfig = [
 function App() {
   return (
     <div className="App">
-      <HashRouter>
-        {renderRoutes(routerConfig)}
-      </HashRouter>
+      <AxiosConfig config={{ baseURL: 'http://localhost:3000/api/' }}>
+        <HashRouter>
+          {renderRoutes(routerConfig)}
+        </HashRouter>
+      </AxiosConfig>
     </div>
   );
 }
