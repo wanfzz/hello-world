@@ -1,10 +1,12 @@
-import { renderRoutes } from 'react-router-config'
+import { Provider } from 'mobx-react'
+import { renderRoutes, RouteConfig } from 'react-router-config'
 import { HashRouter, Redirect } from 'react-router-dom'
-import Home from '@/container/Home';
-import Login from '@/container/Login';
-import { AxiosConfig } from '@/providers/axios'
+import Home from '@/container/Home'
+import Login from '@/container/Login'
+import Todo from '@/container/Todo'
+import stores from './store'
 
-const routerConfig = [
+const routerConfig: RouteConfig[] = [
   {
     path: '/',
     exact: true,
@@ -14,21 +16,25 @@ const routerConfig = [
     path: '/home',
     component: Home,
   },
-  {
+  {                             
     path: '/login',
     component: Login,
+  },
+  {
+    path: '/todo',
+    component: Todo,
   }
 ]
 
 function App() {
   return (
-    <div className="App">
-      <AxiosConfig config={{ baseURL: 'http://localhost:3000/api/' }}>
+    <Provider {...stores}>
+      <div className="App">
         <HashRouter>
           {renderRoutes(routerConfig)}
         </HashRouter>
-      </AxiosConfig>
-    </div>
+      </div>
+    </Provider>
   );
 }
 

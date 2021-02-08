@@ -1799,6 +1799,11 @@
   resolved "https://registry.npm.taobao.org/@types/q/download/@types/q-1.5.4.tgz?cache=0&sync_timestamp=1605055096527&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fq%2Fdownload%2F%40types%2Fq-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
   integrity sha1-FZJUFOCtLNdlv+9YhC9+JqesyyQ=
 
+"@types/qs@^6.9.5":
+  version "6.9.5"
+  resolved "https://registry.npm.taobao.org/@types/qs/download/@types/qs-6.9.5.tgz?cache=0&sync_timestamp=1605055213283&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fqs%2Fdownload%2F%40types%2Fqs-6.9.5.tgz#434711bdd49eb5ee69d90c1d67c354a9a8ecb18b"
+  integrity sha1-Q0cRvdSete5p2QwdZ8NUqajssYs=
+
 "@types/react-dom@^16.9.8":
   version "16.9.10"
   resolved "https://registry.npm.taobao.org/@types/react-dom/download/@types/react-dom-16.9.10.tgz#4485b0bec3d41f856181b717f45fd7831101156f"
@@ -7398,6 +7403,23 @@ mkdirp@^1.0.3, mkdirp@^1.0.4:
   resolved "https://registry.npm.taobao.org/mkdirp/download/mkdirp-1.0.4.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmkdirp%2Fdownload%2Fmkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
   integrity sha1-PrXtYmInVteaXw4qIh3+utdcL34=
 
+mobx-react-lite@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.npm.taobao.org/mobx-react-lite/download/mobx-react-lite-3.2.0.tgz#331d7365a6b053378dfe9c087315b4e41c5df69f"
+  integrity sha1-Mx1zZaawUzeN/pwIcxW05Bxd9p8=
+
+mobx-react@^7.1.0:
+  version "7.1.0"
+  resolved "https://registry.npm.taobao.org/mobx-react/download/mobx-react-7.1.0.tgz#d947cada3cfad294b4b6f692e969c242b9c16eaf"
+  integrity sha1-2UfK2jz60pS0tvaS6WnCQrnBbq8=
+  dependencies:
+    mobx-react-lite "^3.2.0"
+
+mobx@^6.1.5:
+  version "6.1.5"
+  resolved "https://registry.npm.taobao.org/mobx/download/mobx-6.1.5.tgz#bef273670c520eb67d09938812de525ad7be4c9f"
+  integrity sha1-vvJzZwxSDrZ9CZOIEt5SWte+TJ8=
+
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npm.taobao.org/move-concurrently/download/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
@@ -9003,6 +9025,11 @@ qs@6.7.0:
   version "6.7.0"
   resolved "https://registry.npm.taobao.org/qs/download/qs-6.7.0.tgz?cache=0&sync_timestamp=1610598111557&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fqs%2Fdownload%2Fqs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
   integrity sha1-QdwaAV49WB8WIXdr4xr7KHapsbw=
+
+qs@^6.9.6:
+  version "6.9.6"
+  resolved "https://registry.npm.taobao.org/qs/download/qs-6.9.6.tgz?cache=0&sync_timestamp=1610598111557&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fqs%2Fdownload%2Fqs-6.9.6.tgz#26ed3c8243a431b2924aca84cc90471f35d5a0ee"
+  integrity sha1-Ju08gkOkMbKSSsqEzJBHHzXVoO4=
 
 qs@~6.5.2:
   version "6.5.2"
