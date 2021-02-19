@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
 import styled, { css } from 'styled-components'
 import { useHistory } from 'react-router'
+import { inject, observer } from 'mobx-react'
+import Menu from '@components/Menu'
+import { AppStoreTypes } from '@store/appStore'
+import { $fetch, HTTP_PREFIX } from '@/common/request'
 
 const Button = styled.button<{ primary?: boolean }>`
   background: transparent;
@@ -16,26 +20,30 @@ const Button = styled.button<{ primary?: boolean }>`
   `}
 `;
 
-function Home() {
+const Home: React.FC<{ AppStore: AppStoreTypes }> = ({ AppStore }) => {
+
+  console.log(AppStore);
+
   let history = useHistory();
 
   useEffect(() => {
-    fetch('/articles').then(response => {
-      return response.json()
-    }).then(res => {
-      console.log(res)
-    }).catch(function (err) {
+    $fetch(`${HTTP_PREFIX}/articles`).then(res => {
+      console.log(res);
+    }).catch(err => {
       console.log(err);
     })
   }, [])
 
   return (
     <>
+      <h1>{AppStore.appName}</h1>
       <h1>HOME</h1>
       <Button onClick={() => history.push('/login')}>Normal Button</Button>
       <Button primary>Primary Button</Button>
+      <hr />
+      <Menu></Menu>
     </>
   );
 }
 
-export default Home
+export default inject('AppStore')(observer(Home))

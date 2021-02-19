@@ -1,9 +1,17 @@
 import { makeAutoObservable } from 'mobx';
 
-class AppStore {
-  appName: string = 'NEST_APP'
+export interface AppStoreTypes {
+  appName: string,
+  changeAppName: (name: string) => void
+}
+
+class AppStore implements AppStoreTypes{
+  appName = 'NEST_APP'
   constructor() {
     makeAutoObservable(this)
+  }
+  changeAppName(name: string): void {
+    this.appName = name
   }
 }
 

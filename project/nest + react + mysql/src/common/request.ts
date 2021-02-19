@@ -3,7 +3,7 @@ import qs from 'qs'
 
 let instance = axios.create({
     baseURL: '/',
-    timeout: 10000,
+    timeout: 3000,
     headers: {
         'content-type': 'application/x-www-form-urlencoded'
     }
@@ -31,4 +31,4 @@ instance.interceptors.response.use(response => {
  */
 export const HTTP_PREFIX = process.env.NODE_ENV === 'development' ? '/api' : '/release_api'
 
-export const Interface = instance
+export const $fetch = instance
