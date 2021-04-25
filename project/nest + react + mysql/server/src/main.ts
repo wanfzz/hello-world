@@ -4,6 +4,7 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 
 async function bootstrap() {
   const appOptions = {cors: true};
+  // NestFactory工厂类的静态方法create来创建一个Nest应用实例
   const app = await NestFactory.create(ApplicationModule, appOptions);
   app.setGlobalPrefix('api');
 
