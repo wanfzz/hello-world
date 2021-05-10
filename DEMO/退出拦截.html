@@ -1,76 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<style>
+			body {
+				background-color: #333333;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100vw;
+				height: 100vh;
+			}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style>
-        body {
-            background-color: #333333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100vw;
-            height: 100vh;
-        }
+			.outModals {
+				max-width: 300px;
+				color: #333333;
+				background-color: #ffffff;
+				padding: 20px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				display: none;
+			}
+		</style>
+	</head>
 
-        .outModals {
-            max-width: 300px;
-            color: #333333;
-            background-color: #ffffff;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            display: none;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="outModals">
-        <h1 class="outModals-title">确认退出吗?</h1>
-        <div class="outModals-footer">
-            <button class="outModals_sure">cancel</button>
-            <button class="outModals_out">confirm</button>
-        </div>
-    </div>
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-        $(function () {
-            $(window).on('popstate', function () {
-                $('.outModals').hide() //outModals  弹窗class
-                //当浏览器前进时不弹弹窗
-                if (location.hash.indexOf('myback') == -1) {
-                    stateInit()
-                }
-                window.history.pushState(null, null, '#myback');
-            });
-            //防止浏览器刷新造成多个历史记录
-            if (location.hash.indexOf('myback') == -1 || location.hash == '') {
-                window.history.pushState(null, null, '#myback');
-                window.history.forward(1);
-            }
-            function stateInit() {
-                $('.outModals').css('display', 'flex')
-                // 继续
-                $('.outModals_sure').unbind('click').bind('click', function () {
-                    $('.outModals').hide()
-                    window.history.forward(1);
-                })
-                //离开
-                $('.outModals_out').unbind('click').bind('click', function () {
-                    $('.outModals').hide()
-                    window.history.go(-2)
-                })
-
-            }
-        })
-    </script>
-
-</body>
-
+	<body>
+		<div class="outModals">
+			<h1 class="outModals-title">确认退出吗?</h1>
+			<div class="outModals-footer">
+				<button class="outModals_sure">cancel</button>
+				<button class="outModals_out">confirm</button>
+			</div>
+		</div>
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+			$(function () {
+				$(window).on('popstate', function () {
+					$('.outModals').hide(); //outModals  弹窗class
+					//当浏览器前进时不弹弹窗
+					if (location.hash.indexOf('myback') == -1) {
+						stateInit();
+					}
+					window.history.pushState(null, null, '#myback');
+				});
+				//防止浏览器刷新造成多个历史记录
+				if (location.hash.indexOf('myback') == -1 || location.hash == '') {
+					window.history.pushState(null, null, '#myback');
+					window.history.forward(1);
+				}
+				function stateInit() {
+					$('.outModals').css('display', 'flex');
+					// 继续
+					$('.outModals_sure')
+						.unbind('click')
+						.bind('click', function () {
+							$('.outModals').hide();
+							window.history.forward(1);
+						});
+					//离开
+					$('.outModals_out')
+						.unbind('click')
+						.bind('click', function () {
+							$('.outModals').hide();
+							window.history.go(-2);
+						});
+				}
+			});
+		</script>
+	</body>
 </html>

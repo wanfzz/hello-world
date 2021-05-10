@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <style>
-    body {
-      min-height: 100vh;
-      overflow: hidden;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    a {
-      font-size: 20px;
-    
-      padding: 0.7em 1.4em;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: #fff;
-      position: relative;
-    }
-    a::before {
-      content: '';
-      transform: skewX(-45deg);
-      background-color: #58a;
-      position: absolute;
-      top: 0;right: 0;bottom: 0;left: 0;
-      z-index: -1;
-    }
-  </style>
-</head>
-<body>
-  <a href="#">click me</a>
-  <a href="#">click me</a>
-  <a href="#">click me</a>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<style>
+			body {
+				min-height: 100vh;
+				overflow: hidden;
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			a {
+				font-size: 20px;
+
+				padding: 0.7em 1.4em;
+				text-transform: uppercase;
+				text-decoration: none;
+				color: #fff;
+				position: relative;
+			}
+			a::before {
+				content: '';
+				transform: skewX(-45deg);
+				background-color: #58a;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: -1;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#">click me</a>
+		<a href="#">click me</a>
+		<a href="#">click me</a>
+	</body>
 </html>

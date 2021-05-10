@@ -1,56 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Docuent</title>
-    <style>
-        body {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Docuent</title>
+		<style>
+			body {
+				height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 
-            /*background-color: gray;*/
-        }
-        .parent {
-            font-size: 80px;
-        }
-        /*
+				/*background-color: gray;*/
+			}
+			.parent {
+				font-size: 80px;
+			}
+			/*
             使用em 只需要修改父级字体大小 子元素自动按比例缩放；
         */
-        .button {
-            /* padding: 6px 16px */
-            padding: 0.3em 0.8em;
-            border: 1px solid rgba(0,0,0,0.1);
-            background: #58a linear-gradient(hsla(0, 0%, 100%, 0.2), transparent);
-            border-radius: .2em;
-            box-shadow:  0 0.05em 0.25em rgba(0,0,0,0.5);
-            color: white;
-            text-shadow: 0 -0.05em 0.05em rgba(0,0,0,0.5);
-            font-size: 125%;
-            line-height: 1.5;
-        }
-        .button.cancel {
-            background: #c00;
-        }
-        .button.ok {
-            background: #6b0;
-        }
-    </style>
-</head>
-<body>
-<div class="parent">
-    <em>EM?</em>
-    <br>
-    <br>
-    <br>
-    <button class="button">Yes!</button>
-    <button class="button cancel">Yes!</button>
-    <button class="button ok">Yes!</button>
-</div>
-
-</body>
+			.button {
+				/* padding: 6px 16px */
+				padding: 0.3em 0.8em;
+				border: 1px solid rgba(0, 0, 0, 0.1);
+				background: #58a linear-gradient(hsla(0, 0%, 100%, 0.2), transparent);
+				border-radius: 0.2em;
+				box-shadow: 0 0.05em 0.25em rgba(0, 0, 0, 0.5);
+				color: white;
+				text-shadow: 0 -0.05em 0.05em rgba(0, 0, 0, 0.5);
+				font-size: 125%;
+				line-height: 1.5;
+			}
+			.button.cancel {
+				background: #c00;
+			}
+			.button.ok {
+				background: #6b0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="parent">
+			<em>EM?</em>
+			<br />
+			<br />
+			<br />
+			<button class="button">Yes!</button>
+			<button class="button cancel">Yes!</button>
+			<button class="button ok">Yes!</button>
+		</div>
+	</body>
 </html>
