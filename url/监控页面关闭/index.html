@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<button id="btn">打开iframe</button>
+		<script type="text/javascript">
+			document.getElementById('btn').addEventListener('click', function () {
+				window.open('./frame.html',
+					'_blank',
+                    'location=no, toolbar=no, width=500, height=500, left=100, top=100'
+				);
+			});
+		</script>
+	</body>
+</html>

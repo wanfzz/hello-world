@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>FRAME</h1>
+		<script>
+            opener.console.log('进入frame')
+			window.addEventListener('unload', function() {
+                localStorage.setItem('close', 1)
+                opener.navigator.sendBeacon('http://114.116.29.183:6522/mongodb/police/querybuildhum');
+            }, false);
+		</script>
+	</body>
+</html>
